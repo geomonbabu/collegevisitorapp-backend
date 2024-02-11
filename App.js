@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 const securouter = require("./controllers/SecurityRouter")
+const visitorrouter = require("./controllers/VisitorRouter")
 
 
 //aliasname
@@ -16,6 +17,7 @@ mongoose.connect("mongodb+srv://megeomonbabu:geo12345@cluster0.i1dx7ax.mongodb.n
 
 //routing or api
 app.use("/api/college",securouter)
+app.use("/api/college",visitorrouter)
 
 
 app.listen(3001,()=>[
